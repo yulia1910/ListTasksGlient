@@ -1,0 +1,55 @@
+.main{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+    color: #23384e;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.autocomplete{   
+    width: 50%;  
+}
+.header{
+    font-weight: 600;
+    font-size: 1.25em;    
+}
+.title{
+    font-weight: 600;
+    margin-top: 30px;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+}
+.text{
+    margin-left: 7px;
+    font-size: 1.25em;
+}
+.displayTask{
+    margin-top: 30px;
+}
+:host >>>.p-autocomplete-dd .p-autocomplete-input, .p-autocomplete-dd .p-autocomplete-multiple-container{
+    width:542px;
+}
+:host >>> .p-inputtext:enabled:focus{
+    border-color: #ccc !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+@media only screen and (max-width: 600px) {
+    :host >>> .p-autocomplete-dd .p-autocomplete-input, .p-autocomplete-dd .p-autocomplete-multiple-container{
+        width: 300px;
+    }
+    
+  }
+
+.error{
+    position: absolute;
+    top: 30%;
+    font-weight: 600;
+    color: #878787;
+    font-size: 1.4rem;
+    right: 20%;
+    left: 20%;
+}
+

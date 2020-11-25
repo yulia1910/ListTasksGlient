@@ -1,0 +1,20 @@
+<div class="main" *ngIf="!errorR">
+    <div class="title">For Detailes of Task Enter Task Title </div>
+    <div class="autocomplete">
+    <p-autoComplete  [(ngModel)]="selectedTitle" [suggestions]="listTasks" field="title"
+                            (completeMethod)="searchTasks($event)"
+                            [dropdown]="true" (onSelect)="selectTask($event)">
+    </p-autoComplete>
+  </div>
+  <div *ngIf="selectedTask" class="displayTask">
+    <p><span class="header">Id:</span><span class="text">{{ selectedTask.id }}</span></p>
+    <p><span class="header">Completed:</span><span class="text">{{ selectedTask.completed }}</span></p>
+    <p><span class="header">Title:</span><span class="text">{{ selectedTask.title }}</span></p>    
+  </div>
+</div>
+
+<div *ngIf="errorR" class="error">
+  <div class="error">{{errorR}}</div>
+</div>
+
+
